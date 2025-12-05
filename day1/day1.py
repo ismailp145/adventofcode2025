@@ -37,7 +37,6 @@ with open("input.txt", "r") as file:
             case "R": 
                 if mid + newVal > 99:
                     mid = (newVal+mid) - 100
-                    count += multiplier
                     if mid == 0:
                         count += multiplier + 1
                     else:
