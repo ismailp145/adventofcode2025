@@ -27,22 +27,18 @@ with open("input.txt", "r") as file:
             case "L":
                 if mid - newVal < 0:
                     mid = 100 + (mid-newVal)
-                    if mid == 0:
-                        count += multiplier + 1
-                    else:
-                        count += multiplier
                 else: 
                     mid -= newVal
                     
             case "R": 
                 if mid + newVal > 99:
-                    mid = (newVal+mid) - 100
-                    if mid == 0:
-                        count += multiplier + 1
-                    else:
-                        count += multiplier
+                    mid = (newVal+mid) - 100    
                 else: mid += newVal
-            
+                
+        if mid == 0:
+            count += multiplier + 1
+        else:
+            count += multiplier 
                 
     file.close()
 
