@@ -8,11 +8,10 @@ def save_value(line):
     if len (newLine) <=2 :
         return int(line[1:]) % 100, 1    
     else:
-        lastLine = newLine[-2:]
         multiplier = newLine[:-2]
         print(newLine)
-        print(multiplier, lastLine)
-        return int(lastLine) , int(multiplier)
+        
+        return int(line[1:]) % 100 , int(multiplier)
 
 
 with open("input.txt", "r") as file:
