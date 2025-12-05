@@ -33,11 +33,13 @@ with open("input.txt", "r") as file:
             case "R": 
                 if mid + newVal > 99:
                     mid = (newVal+mid) - 100    
-                else: mid += newVal
+                else: 
+                    mid += newVal
                 
         if mid == 0:
             count += multiplier + 1
-        else:
+        elif len(line) > 3:
+            print(line, len(line))
             count += multiplier 
                 
     file.close()
@@ -45,5 +47,32 @@ with open("input.txt", "r") as file:
     print("count",count)
 
     """
+    L68
+    L30
+    R48
+    L5
+    R60
+    L55
+    L1
+    L99
+    R14
+    L82
+
+    newVal = 68
+    multi = 1
+    mid = 50 
+    line = l68
+    50 - 68 <0; true
+    mid = 100 +(mid-val)
+    mid = 82
+    else count +=1 true
+    
+    count = 1
+    mid = 82
+    L30
+    nval = 30
+    mult = 1
+    
+    
 
     """
